@@ -1,0 +1,46 @@
+{
+    "name": "cpp-project-wizard",
+    "displayName": "C++ Project Wizard",
+    "publisher": "adeun",
+    "version": "0.0.1",
+    "main": "./out/extension.js",
+    "engines": { "vscode": "^1.90.0" },
+  
+    "scripts": {
+      "compile": "tsc -p ./",
+      "watch": "tsc -w -p ./",
+      "vscode:prepublish": "npm run compile"
+    },
+  
+    "activationEvents": [
+      "onCommand:cpp.initProject",
+      "onCommand:cpp.createClass",
+      "onCommand:cpp.runMain"
+    ],
+    "contributes": {
+      "commands": [
+        { "command": "cpp.initProject",  "title": "C++: Initialize Project" },
+        { "command": "cpp.createClass",  "title": "C++: Create Class" },
+        { "command": "cpp.runMain",      "title": "C++: Build & Run main.cpp" }
+      ],
+      "menus": {
+        "explorer/context": [
+          {
+            "command": "cpp.createClass",
+            "when": "explorerResourceIsFolder",
+            "group": "navigation@99"
+          }
+        ]
+      }
+    },
+  
+    
+    "dependencies": {},                    
+    "devDependencies": {
+      "@types/vscode": "^1.90.0",          
+      "@vscode/test-electron": "^2.4.0",   
+      "typescript": "^5.4.0",
+      "ts-node": "^10.0.0"
+    }
+  }
+  

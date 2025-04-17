@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+      /* where the JS goes */
+      "outDir": "out",
+      "rootDir": "src",
+  
+      /* JS flavour */
+      "target": "ES2022",
+      "module": "commonjs",
+      "lib": ["ES2022"],
+  
+      /* IntelliSense & safety */
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+  
+      /* VS Code API typings */
+      "types": ["node", "vscode"],
+  
+      /* helpful for debugging */
+      "sourceMap": true
+    },
+  
+    /* tell the compiler which files to include */
+    "include": ["src"]
+  }
+
+  
